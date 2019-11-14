@@ -146,7 +146,7 @@ body{
     font-size: 16px;
     font-weight: 700;
     outline: none;
-    padding: 16px 22px;
+    padding: 16px 22px 17px 21px;
 }
 .logos{
     display: flex;
@@ -264,6 +264,21 @@ body{
     color: #540cfa;
     line-height: 1.5;
     text-decoration: none;
+    position: relative;
+    padding-right: 14px;
+}
+.item_learn-more::before{
+    content: '';
+    display: block;
+    width: 4.25px;
+    height: 4.25px;
+    border-top: 2px solid #540cfa;
+    border-right: 2px solid #540cfa;
+    transform: rotate(45deg) translateY(-50%);
+    border-radius: 1px;
+    position: absolute;
+    top: 50%;
+    right: 3px;
 }
 .posters{
     margin-bottom: 140px;
@@ -275,7 +290,7 @@ body{
 }
 .poster_item{
     height: 24vw;
-    width: 16vw;
+    min-width: 16vw;
 }
 .track_advantages{
     margin-bottom: 140px;
@@ -285,8 +300,9 @@ body{
 }
 .advantages_content{
     max-width: 460px;
-    margin-left: calc(50vw - 550px);
+    margin-left: 25px;
     margin-top: 80px;
+    margin-right: 150px;
 }
 .advantages_title{
     font-size: 46px;
@@ -321,12 +337,15 @@ body{
 .advantages_item.disabled{
     opacity: 0.5;
 }
+.platforms_images{
+    flex: 1;
+}
 .platform_bg-img{
     background-image: url("./../img/web-app-mockup.png");
-    width: 820px;
+    max-width: 820px;
     height: 512px;
     position: relative;
-    left: 150px;
+    width: 100%;
 }
 .platform-mockup{
     position: absolute;
@@ -349,7 +368,7 @@ body{
     font-size: 18px;
     font-weight: 300;
     color: #ffffff;
-    margin-bottom: 0 0 10px;
+    margin: 0 0 10px 0;
 }
 .community_titles{
     max-width: 460px;
@@ -489,4 +508,220 @@ body{
     color: #000000;
     display: block;
     text-align: center;
+}
+@media only screen and (min-width: 1150px){
+    .advantages_content{
+        margin-left: calc(50vw - 550px);
+    }
+}
+@media only screen and (max-width: 768px) {
+    .container{
+        padding: 0 16px;
+    }
+    .header{
+        margin-bottom: 40px;
+    }
+    .navigation-list{
+        display: none;
+    }
+    .log-in{
+        display: none;
+    }
+    .first-screen{
+        margin-bottom: 90px;
+    }
+    .hero{
+        flex-direction: column;
+    }
+    .hero__title{
+        font-size: 42px;
+        line-height: 1.14;
+    }
+    .hero__description{
+        font-size: 18px;
+        max-width: 100%;
+    }
+    .form-start{
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .form-start__label{
+        flex: 1;
+        min-width: auto;
+    }
+    .img-hero{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .compatible_title{
+        font-size: 10px;
+    }
+    .logo-compatible:not(:last-child){
+        margin-right: 30px;
+    }
+    .compatible_logos{
+        margin-bottom: 44px;
+    }
+    .logo-compatible.netflix{
+        width: 22%;
+        max-width: 76px;
+    }
+    .logo-compatible.apple{
+        width: 6%;
+        max-width: 21px;
+    }
+    .logo-compatible.android{
+        width: 6%;
+        max-width: 21px;
+    }
+    .logo-compatible.windows{
+        width: 7%;
+        max-width: 25px;
+    }
+    .logo-compatible.synology{
+        width: 23%;
+        max-width: 79px;
+    }
+    .logo-compatible img{
+        object-fit: contain;
+        width: 100%;
+    }
+    .features{
+        margin-bottom: 60px;
+    }
+    .main_titles{
+        text-align: left;
+        margin: 0 auto 50px;
+        max-width: 100%;
+    }
+    .features_name{
+        font-size: 16px;
+    }
+    .features_title{
+        font-size: 35px;
+        line-height: 1.14;
+        margin: 0 0 20px 0;
+    }
+    .features_description{
+        font-size: 18px;
+    }
+    .features_items{
+        flex-direction: column;
+    }
+    .one_item{
+        align-items: flex-start;
+        margin-right: 0;
+        max-width: none;
+        width: 100%;
+    }
+    .one_item:not(:last-child){
+        margin-bottom: 50px;
+    }
+    .item_description{
+        text-align: left;
+    }
+    .posters{
+        margin-bottom: 80px;
+    }
+    .poster_item{
+        min-width: 47vw;
+        height: 71vw;
+    }
+    .platform_bg-img{
+        background-image: none;
+    }
+    .advantages{
+        flex-direction: column;
+    }
+    .advantages_content{
+        margin: 0 0 60px;
+        padding: 0 16px;
+        max-width: 100%;
+    }
+    .advantages_title{
+        font-size: 32px;
+        line-height: 1.19;
+    }
+    .advantages_description{
+        font-size: 16px;
+        margin: 0 0 47px;
+    }
+    .platform-mockup{
+        position: static;
+        display: block;
+        margin: 0 auto;
+    }
+    .track_advantages{
+        margin-bottom: 70px;
+    }
+    .community{
+        margin-bottom: 70px;
+    }
+    .community .container{
+        padding-right: 0;
+    }
+     .community_content{
+        flex-direction: column;
+    }
+    .community_titles{
+        margin-top:70px;
+        margin-bottom: 50px;
+        max-width: 100%;
+        padding-right: 16px;
+    }
+    .community_name{
+        font-size: 16px;
+    }
+    .community_title{
+        font-size: 32px;
+        line-height: 1.19;
+    }
+    .community_description{
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .colums{
+        height: auto;
+        margin-bottom: 100px;
+    }
+    .community_column.second_column{
+        display: none;
+    }
+    .first_column{
+        margin-top: 0;
+    }
+    .community_column:not(:last-child){
+        margin-right: 0;
+    }
+    .twit{
+        margin-right: 16px;
+        width: 70vw;
+        max-width: 260px;
+    }
+    .community_column.first_column{
+        display: flex;
+        height: auto;
+    }
+    .main_titles-started{
+        text-align: center;
+    }
+    .get_started_name{
+        font-size: 16px;
+    }
+    .get_started_title{
+        font-size: 35px;
+        line-height: 1.14;
+        margin-bottom: 20px;
+    }
+    .get_started_description{
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .form-start.form-align{
+        margin-bottom: 100px;
+    }
+    .footer_copyright{
+        font-weight: normal;
+        font-size: 11px;
+    }
 }
