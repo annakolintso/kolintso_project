@@ -4,21 +4,22 @@
     <title>ShowTrackr</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
-<header class="header">
+<header class="position-sticky header">
     <div class="container">
-        <div class="navigation">
-            <span class="navigation__logo">Show<span class="navigation__logo-part">Trackr</span></span>
-            <nav>
-                <ul class="navigation__list">
-                    <li class="navigation__item"><a class="navigation__link" href="/features">Features</a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="/community">Community</a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="/get-started">Get Started</a></li>
+        <div class="row align-items-center justify-content-between" >
+            <span class="navigation__logo col-lg-2 col-sm-4 col-6">Show<span class="navigation__logo-part">Trackr</span></span>
+            <nav class="align-items-center justify-content-center col-lg-7 d-none d-lg-flex">
+                <ul class="mb-0 d-flex justify-content-center">
+                    <li class="mr-5"><a class="navigation__link" href="/features">Features</a></li>
+                    <li class="mr-5"><a class="navigation__link" href="/community">Community</a></li>
+                    <li><a class="navigation__link" href="/get-started">Get Started</a></li>
                 </ul>
             </nav>
-            <div class="sign">
+            <div class="col-lg-3 col-sm-4 col-6 d-flex align-items-center justify-content-end">
                 <a class="sign__log-in" href="/log-in">Log in</a>
                 <button class="sign__button">Get started</button>
             </div>
@@ -26,16 +27,16 @@
     </div>
 </header>
 <main class="content">
-    <section class="hero">
+    <section class="hero position-relative">
         <div class="hero__rectangles"></div>
         <div class="container">
-            <div class="hero__wrap">
-                <div class="hero__content">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-lg-7">
                     <h1 class="hero__title">Track your shows automatically</h1>
                     <p class="hero__description">With ShowTrackr you can track your favorite TV shows automatically, so
                         you never loose track of your TV shows ever again. 🍿</p>
-                    <form class="form-start">
-                        <label class="form-start__label">
+                    <form class="d-flex form-start">
+                        <label class="d-flex flex-column justify-content-center form-start__label mb-0">
                             <span class="form-start__span">Email</span>
                             <input class="form-start__input" type="text" placeholder="example@gmail.com">
                         </label>
@@ -43,7 +44,7 @@
                     </form>
                     <div class="compatible">
                         <p class="compatible__title">Compatible with</p>
-                        <ul class="compatible__logos">
+                        <ul class="d-flex align-items-center m-0">
                             <li class="logo-compatible netflix"><img src="./src/img/netflix.svg" alt="netflix"></li>
                             <li class="logo-compatible apple"><img src="./src/img/apple.svg" alt="apple"></li>
                             <li class="logo-compatible android"><img src="./src/img/android.svg" alt="android"></li>
@@ -52,89 +53,97 @@
                         </ul>
                     </div>
                 </div>
-                <img class="hero__mockup" src="src/img/iphone-x-mockup.png" alt="iphone">
+                <div class="col-md-12 col-sm-12 col-lg-5">
+                    <img src="src/img/iphone-x-mockup.png" alt="iphone">
+                </div>
             </div>
         </div>
     </section>
     <section class="features">
         <div class="container">
-            <div class="main__titles">
-                <p class="features__name">Features</p>
-                <h2 class="features__title">Built and customized for your habits</h2>
-                <p class="features__description">ShowTrackr’s built-in machine learning and context-aware features
-                    guarantee that all
-                    the notifications and recommendations are always delivered to you in the perfect moment.</p>
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-7 col-md-12 col-sm-12 text-lg-center text-md-left text-sm-left">
+                    <p class="features__name">Features</p>
+                    <h2 class="features__title">Built and customized for your habits</h2>
+                    <p class="features__description">ShowTrackr’s built-in machine learning and context-aware features
+                        guarantee that all
+                        the notifications and recommendations are always delivered to you in the perfect moment.</p>
+                </div>
             </div>
-            <div class="features__items">
-                <div class="features__one">
-                    <div class="features__icon-first">
-                        <img src="./src/img/ic-play.svg" alt="icon_play">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12 text-lg-center text-md-left text-sm-left mb-lg-0 mb-4">
+                        <div class="features__icon-first d-flex align-items-center justify-content-center mx-lg-auto">
+                            <img src="./src/img/ic-play.svg" alt="icon_play">
+                        </div>
+                        <h5 class="item__name">Automated tracking</h5>
+                        <p class="item__description">Track your favorite shows automatically without switching between
+                            apps.</p>
+                        <a class="item__learn-more" href="/learn-more">Learn more</a>
                     </div>
-                    <h5 class="item__name">Automated tracking</h5>
-                    <p class="item__description">Track your favorite shows automatically without switching between
-                        apps.</p>
-                    <a class="item__learn-more" href="/learn-more">Learn more</a>
+                <div class="col-lg-4 col-md-12 col-sm-12 text-lg-center text-md-left text-sm-left mb-lg-0 mb-4">
+                        <div class="features__icon-second d-flex align-items-center justify-content-center mx-lg-auto">
+                            <img src="./src/img/ic-machine.svg" alt="icon_machine">
+                        </div>
+                        <h5 class="item__name">Machine learning</h5>
+                        <p class="item__description">Get recommendations like never before, which are truly customized for
+                            your taste.</p>
+                        <a class="item__learn-more" href="/learn-more">Learn more</a>
                 </div>
-                <div class="features__one">
-                    <div class="features__icon-second">
-                        <img src="./src/img/ic-machine.svg" alt="icon_machine">
+                <div class="col-lg-4 col-md-12 col-sm-12 text-lg-center text-md-left text-sm-left mb-lg-0 mb-4">
+                        <div class="features__icon-third d-flex align-items-center justify-content-center mx-lg-auto">
+                            <img src="./src/img/ic-notifications.svg" alt="icon_notification">
+                        </div>
+                        <h5 class="item__name">Smart notifications</h5>
+                        <p class="item__description">Receive smart notifications exactly at the right moments when you need
+                            them.</p>
+                        <a class="item__learn-more" href="/learn-more">Learn more</a>
                     </div>
-                    <h5 class="item__name">Machine learning</h5>
-                    <p class="item__description">Get recommendations like never before, which are truly customized for
-                        your taste.</p>
-                    <a class="item__learn-more" href="/learn-more">Learn more</a>
-                </div>
-                <div class="features__one">
-                    <div class="features__icon-third">
-                        <img src="./src/img/ic-notifications.svg" alt="icon_notification">
-                    </div>
-                    <h5 class="item__name">Smart notifications</h5>
-                    <p class="item__description">Receive smart notifications exactly at the right moments when you need
-                        them.</p>
-                    <a class="item__learn-more" href="/learn-more">Learn more</a>
-                </div>
             </div>
         </div>
     </section>
     <section class="posters">
-        <div class="posters__group">
-            <img class="posters_item" src="./src/img/poster_1.png" alt="black mirror">
-            <img class="posters_item" src="./src/img/poster_2.png" alt="stranger things">
-            <img class="posters_item" src="./src/img/poster_3.png" alt="westworld">
-            <img class="posters_item" src="./src/img/poster_4.png" alt="house of cards">
-            <img class="posters_item" src="./src/img/poster_5.png" alt="game of thrones">
-            <img class="posters_item" src="./src/img/poster_6.png" alt="flash">
-            <img class="posters_item" src="./src/img/poster_7.png" alt="murde">
+        <div class="container-fluid">
+            <div class="row justify-content-center overflow-hidden flex-nowrap">
+                <img class="posters_item" src="./src/img/poster_1.png" alt="black mirror">
+                <img class="posters_item" src="./src/img/poster_2.png" alt="stranger things">
+                <img class="posters_item" src="./src/img/poster_3.png" alt="westworld">
+                <img class="posters_item" src="./src/img/poster_4.png" alt="house of cards">
+                <img class="posters_item" src="./src/img/poster_5.png" alt="game of thrones">
+                <img class="posters_item" src="./src/img/poster_6.png" alt="flash">
+                <img class="posters_item" src="./src/img/poster_7.png" alt="murde">
+            </div>
         </div>
     </section>
     <section class="track-advantages">
-        <div class="advantages">
-            <div class="advantages__content">
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-lg-4 advantages__content">
                 <h3 class="advantages__title">Easy-to-use interfaces on every platform</h3>
                 <p class="advantages__description">Since most of our features work in a completely automated way, you
                     will mainly use
                     our apps to discover new TV shows recommended for you and discuss the most interesting
                     episodes with like-minded people.</p>
                 <div class="advantages__group">
-                    <div class="advantages__item">
+                    <div class="d-flex mb-5">
                         <img class="advantages__icon" src="./src/img/ic-dashboard.svg" alt="dashboard">
                         <p class="advantages__name">Customized Dashboard</p>
                     </div>
-                    <div class="advantages__item advantages__item_disabled">
+                    <div class="d-flex mb-5 advantages__item_disabled">
                         <img class="advantages__icon" src="./src/img/ic-day-night.svg" alt="day&night">
                         <p class="advantages__name">Automatic Day & Night Modes</p>
                     </div>
-                    <div class="advantages__item advantages__item_disabled">
+                    <div class="d-flex advantages__item_disabled">
                         <img class="advantages__icon" src="./src/img/ic-chat.svg" alt="chat">
                         <p class="advantages__name">Integrated Chat Platform</p>
                     </div>
                 </div>
             </div>
-            <div class="platforms__images">
+            <div class="flex-grow-1 flex-shrink-1">
                 <div class="platforms__bg-img">
                     <img class="platforms__mockup" src="./src/img/iphone-x-mockup.png" alt="iphone X">
                 </div>
             </div>
+        </div>
         </div>
     </section>
     <section class="community">
@@ -335,5 +344,8 @@
         </div>
     </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js" integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P" crossorigin="anonymous"></script>
 </body>
 </html>
